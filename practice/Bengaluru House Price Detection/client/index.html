@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <h1>Bengaluru House Price Prediction</h1>
+    <form>
+
+        <label for="area_sqft"><h2>Area in Square Feet</h2></label>
+        <input type="number" value="1000" id="area_sqft" name="total_sqft">
+        <h2>Area Type</h2>
+        <select name="area_type" id="area1">
+            <option value="area_type_carpet  area">Carpet Area</option>
+            <option value="area_type_plot  area">Plot Area</option>
+            <option value="area_type_super built-up  area">Super Built-up Area</option>
+        </select>
+
+
+
+        <h2>BHK</h2>
+        <input type="radio" id="s1" name="size" value="1">
+        <label for="s1">1</label>
+        <input type="radio" id="s2" name="size" value="2" checked>
+        <label for="s2">2</label>
+
+
+        <h2>Balcony</h2>
+        <input type="radio" id="b1" name="balcony" value="1" checked>
+        <label for="b1">1</label>
+        <input type="radio" id="b2" name="balcony" value="2">
+        <label for="b2">2</label>
+
+
+        <h2>Location</h2>
+        <select name="location" id="main_locations">
+            <option selected="selected" disabled="disabled">Select a location</option>
+            <option value="1st phase jp nagar">1st Phase JP Nagar</option>
+            <option value="5th phase jp nagar">5th Phase JP Nagar</option>
+            <option value="mysore road">Mysore Road</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br><input type="button" id="button1" onclick="getPrice()" value="Get Estimated Price">
+        <span id="ans"></span>
+    </form>
+</body>
+</html>
